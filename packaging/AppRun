@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+APPDIR="${APPDIR:-$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)}"
+EXECUTABLE="$APPDIR/usr/lib/subfuse/SubFuse"
+
+if [ ! -x "$EXECUTABLE" ]; then
+    printf '%s\n' "SubFuse executable not found: $EXECUTABLE" >&2
+    exit 1
+fi
+
+exec "$EXECUTABLE" "$@"

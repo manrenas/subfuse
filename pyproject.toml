@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subfuse"
+dynamic = ["version"]
+description = "Aplicação desktop para adicionar legendas a ficheiros de vídeo"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PySide6==6.12.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "ruff==0.11.13"]
+build = ["PyInstaller==6.22.3"]
+
+[project.scripts]
+subfuse = "legenda_app.main_window:main"
+
+[project.gui-scripts]
+SubFuse = "legenda_app.main_window:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "legenda_app.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["legenda_app*"]
+
+[tool.setuptools.package-data]
+legenda_app = ["assets/*.png", "assets/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["integration: tests that invoke locally installed media tools"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

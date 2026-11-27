@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=SubFuse
+Comment=Adicionar legendas a ficheiros de vídeo
+Exec=AppRun
+Icon=subfuse
+Categories=AudioVideo;Video;
+Terminal=false
+StartupNotify=true

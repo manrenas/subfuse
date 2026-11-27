@@ -1,0 +1,7 @@
+SubFuse icon
+
+Created by the project owner. Copyright (c) 2026 @manrenas.
+All rights reserved. The owner permits this icon to be hosted in this
+repository and included in official SubFuse builds. This is not a general
+license to extract, modify, relicense, or reuse the icon independently. The
+MIT License in the repository does not apply to this icon.

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+.venv/
+venv/
+ENV/
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Packaging and build output
+build/
+build_appimage/
+dist/
+*.AppImage
+*.app/
+*.spec
+*.zip
+
+# Local configuration, credentials and temporary files
+.env
+.env.*
+!.env.example
+*.tmp
+*.temp
+*.part
+*.partial
+*.partial.*
+PROMPT.md
+/subfuse-icone.png
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
